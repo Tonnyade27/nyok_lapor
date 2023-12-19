@@ -61,6 +61,10 @@ const PORT = process.env.PORT;
 
 app.use('/user', userRoutes);
 app.use('/admin', adminRoutes);
+app.get(`/test`,  (req, res) => {
+  
+    res.send('Oke');
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
